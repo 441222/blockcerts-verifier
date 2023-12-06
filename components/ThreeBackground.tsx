@@ -89,6 +89,7 @@ const ThreeBackground: React.FC<ThreeBackgroundProps> = ({ background = false })
         sceneRef.current.raf = requestAnimationFrame(animate);
       };
 
+      
       sceneRef.current = { renderer, scene, camera };
       sceneRef.current.raf = requestAnimationFrame(animate);
 
