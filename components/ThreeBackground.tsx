@@ -66,6 +66,7 @@ const ThreeBackground: React.FC<ThreeBackgroundProps> = ({ background = false })
         depthTest: false,
       });
 
+      handleResize();
       const backgroundMesh = new THREE.Mesh(initialBackgroundGeometry, backgroundMaterial);
       backgroundMesh.name = "backgroundMesh";
       scene.add(backgroundMesh);
@@ -89,7 +90,7 @@ const ThreeBackground: React.FC<ThreeBackgroundProps> = ({ background = false })
         sceneRef.current.raf = requestAnimationFrame(animate);
       };
 
-      
+
       sceneRef.current = { renderer, scene, camera };
       sceneRef.current.raf = requestAnimationFrame(animate);
 
